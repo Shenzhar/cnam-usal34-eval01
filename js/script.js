@@ -7,11 +7,21 @@
   function pressOnA() {
     //Il s'agit de la fonction qui est utilisée pour l'evenement 'keyup'
     console.log("A"); //On affiche quelle touche est appuyée.
+    var para = document.createElement("p");
+    var node = document.createTextNode("J'appuie sur A");
+    para.appendChild(node);
+    var element = document.getElementById("affichage");
+    element.appendChild(para);
   }
 
   function pressOnB() {
     //On affiche quelle touche est appuyée.
     console.log("B");
+    var para = document.createElement("p");
+    var node = document.createTextNode("J'appuie sur B");
+    para.appendChild(node);
+    var element = document.getElementById("affichage");
+    element.appendChild(para);
   }
 
   document.addEventListener("keyup", e => {
