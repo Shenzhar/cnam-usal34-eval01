@@ -1,6 +1,7 @@
 (() => {
   let buttonA = document.querySelector(".button-a"); //Cela permet de trouver la classe 'button-a'
   let buttonB = document.querySelector(".button-b");
+  let buttonStart = document.getElementById(".start-button");
   let keyCodeA = 65; //Cela correspond au bouton 'A' du clavier. Cela permet au code de savoir quel touche du clavier est appuyée.
   let keyCodeB = 66; //Cela correspond a la position du 'B'
 
@@ -43,3 +44,4 @@
     if (e.keyCode === keyCodeB) buttonB.classList.add("pressed");
   });
 })();
+document.addEventListenener("keydown", e => {});
