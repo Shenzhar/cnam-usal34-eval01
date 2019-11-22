@@ -53,11 +53,23 @@
     </div>
     <div class="prompt-container">
       <div class="nes-container">
-        <div id="affichage"><p>Hello</p></div>
+        <div id="affichage">
+          <p>Hello</p>
+        </div>
       </div>
     </div>
     <script>
-      const countdown=(e,t=3)=>setTimeout(()=>{const c=document.createElement("p");c.appendChild(document.createTextNode(t.toString())),document.querySelectorAll("#affichage p").length>=5&&document.querySelector("#affichage").removeChild(document.querySelector("#affichage").firstChild),document.querySelector("#affichage").appendChild(c),t>1&&countdown(e,t-1)},1e3);
+      const countdown = (e, t = 3) =>
+        setTimeout(() => {
+          const c = document.createElement("p");
+          c.appendChild(document.createTextNode(t.toString())),
+            document.querySelectorAll("#affichage p").length >= 5 &&
+              document
+                .querySelector("#affichage")
+                .removeChild(document.querySelector("#affichage").firstChild),
+            document.querySelector("#affichage").appendChild(c),
+            t > 1 && countdown(e, t - 1);
+        }, 1e3);
     </script>
     <script src="js/script.js"></script>
   </body>
